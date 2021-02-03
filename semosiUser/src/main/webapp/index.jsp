@@ -26,6 +26,39 @@
    
    <a href="/MemberWritedReview.jsp">작성한 후기</a><br>
    <a href="/MemberReceivedReview.jsp">받은 후기</a><br>
+   
+   
+   	-----------------------------------------------------------------------
+	
+	<form action="/view/member/myPageFinal1.jsp" method="get">
+		<button>/마이페이지(프로필)</button>
+	</form>
+	<form action="/view/member/myPageFinal2_P.jsp" method="get">
+		<button>내 구인 현황(내가 신청한)P</button>
+	</form>
+	<form action="/view/member/myPageFinal2_S.jsp" method="get">
+		<button>내 구직 현황(내가 신청한)S</button>
+	</form>
+	<form action="/view/member/myPageFinal3_P.jsp" method="get">
+		<button>내 구인 현황(내게 지원한)P</button>
+	</form>
+	<form action="/view/member/myPageFinal3_S.jsp" method="get">
+		<button>내 구직 현황(내게 지원한)S</button>
+	</form>
+	<form action="/view/member/myPageFinal4_P.jsp" method="get">
+		<button>찜한 맘시터</button>
+	</form>
+	<form action="/view/member/myPageFinal4_S.jsp" method="get">
+		<button>찜한 일자리</button>
+	</form>
+	<form action="/view/member/myPageFinal5_P.jsp" method="get">
+		<button>구인 신청서 조회</button>
+	</form>
+	<form action="/view/member/myPageFinal5_S.jsp" method="get">
+		<button>구직 신청서 조회</button>
+	</form>
+	---------------------------
+   
    </center>
    
    
@@ -34,6 +67,10 @@
    <footer>
       <%@ include file="/WEB-INF/views/commons/footer.jsp" %>
    </footer>
+   
+   
+   
+   
    
 </body>
 </html>
