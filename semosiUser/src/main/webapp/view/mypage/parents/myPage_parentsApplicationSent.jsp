@@ -9,8 +9,6 @@
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/commons/header.css">
 </head>
 <body>
-
-
 <style>
 @media(max-width:760px){
 		#mypage-wrap{
@@ -35,6 +33,7 @@
 		width: 70%;
 	}
 	#sideBar{
+
 		margin: 0px;
 		height: 100%;
 		width: 22%;
@@ -45,8 +44,7 @@
 		height: 100%;
 		width: 78%;
 	}
-	
-		#kakao-talk-channel-chat-button{
+	#kakao-talk-channel-chat-button{
 	float:right;
 	margin-right:50px;
 }
@@ -74,10 +72,10 @@
 </header>
 <div id="mypage-wrap" class="row">
 	<div id="sideBar">
-		<%@ include file="/view/mypage/common/sidebar_p2.jsp"%>
+		<%@ include file="/view/mypage/common/parentsSidebar.jsp"%>
 	</div>
 	<div id="content">
-		<%@ include file="/view/mypage/parents/applicationFromS_P.jsp"%>
+		<%@ include file="/view/mypage/parents/parentsApplicationSent.jsp"%>
 	</div>
 </div>
 

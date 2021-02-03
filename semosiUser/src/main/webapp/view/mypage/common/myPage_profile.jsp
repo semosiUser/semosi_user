@@ -33,6 +33,7 @@
 		width: 70%;
 	}
 	#sideBar{
+
 		margin: 0px;
 		height: 100%;
 		width: 22%;
@@ -43,7 +44,7 @@
 		height: 100%;
 		width: 78%;
 	}
-		#kakao-talk-channel-chat-button{
+	#kakao-talk-channel-chat-button{
 	float:right;
 	margin-right:50px;
 }
@@ -71,10 +72,10 @@
 </header>
 <div id="mypage-wrap" class="row">
 	<div id="sideBar">
-		<%@ include file="/view/mypage/common/sidebar_s2.jsp"%>
+		<%@ include file="/view/mypage/common/parentsSidebar.jsp"%>
 	</div>
 	<div id="content">
-		<%@ include file="/view/mypage/sitter/applicationToP_S.jsp"%>
+		<%@ include file="/view/mypage/common/profile.jsp"%>
 	</div>
 </div>
 

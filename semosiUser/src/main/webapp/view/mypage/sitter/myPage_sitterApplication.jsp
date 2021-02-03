@@ -9,7 +9,6 @@
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/commons/header.css">
 </head>
 <body>
-
 <style>
 @media(max-width:760px){
 		#mypage-wrap{
@@ -73,12 +72,14 @@
 </header>
 <div id="mypage-wrap" class="row">
 	<div id="sideBar">
-		<%@ include file="/view/mypage/common/sidebar_p2.jsp"%>
+		<%@ include file="/view/mypage/common/sitterSidebar.jsp"%>
 	</div>
 	<div id="content">
-		<%@ include file="/view/mypage/sitter/application_S_ing.jsp"%>
+		<%@ include file="/view/mypage/sitter/sitterApplication.jsp"%>
 	</div>
 </div>
+
+
 <%-- 카카오톡 채팅 아이콘 --%>
 <div id="kakao-talk-channel-chat-button" data-channel-public-id="_xaExoNK" data-title="consult" data-size="small" data-color="yellow" data-shape="pc" data-support-multiple-densities="true"></div>
 <footer>

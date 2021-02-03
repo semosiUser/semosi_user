@@ -72,10 +72,10 @@
 </header>
 <div id="mypage-wrap" class="row">
 	<div id="sideBar">
-		<%@ include file="/view/mypage/common/sidebar_p2.jsp"%>
+		<%@ include file="/view/mypage/common/sitterSidebar.jsp"%>
 	</div>
 	<div id="content">
-		<%@ include file="/view/mypage/common/profile2.jsp"%>
+		<%@ include file="/view/mypage/sitter/sitterInterest.jsp"%>
 	</div>
 </div>
 
