@@ -30,10 +30,10 @@
    
    	-----------------------------------------------------------------------
 	
-	<form action="/view2/mypage/parents/parentsProfile.jsp" method="get">
+	<form action="/view/mypage/parents/parentsProfile.jsp" method="get">
 		<button>/마이페이지 부모</button>
 	</form>
-	<form action="/view2/mypage/sitter/sitterProfile.jsp" method="get">
+	<form action="/view/mypage/sitter/sitterProfile.jsp" method="get">
 		<button>/마이페이지 시터</button>
 	</form>
 	---------------------------
