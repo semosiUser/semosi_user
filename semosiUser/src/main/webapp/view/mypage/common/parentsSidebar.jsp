@@ -123,7 +123,7 @@ div{
             <div id="naviContents">
                 <div id="navigation">
                     <div id="fixedNavi">
-                    	<div class="menu-main"><a href="/view/member/myPageFinal1.jsp"><span>마이페이지</span></a></div>
+                    	<div class="menu-main"><a href="/view/mypage/common/myPage_profile2.jsp"><span>마이페이지</span></a></div>
                     	<hr class="line">
                         <div class="menu-main row m-0">
                         	<div class="menu-title col-9 p-0">
@@ -139,11 +139,11 @@ div{
 							</div>
                         </div>
                        	<div class="menu-sub">
-                                <div class="hide"><a href="#"><span>내가 신청한 구인 현황</span></a></div>
-                                <div class="hide"><a href="#"><span>내게 지원한 구인 현황</span></a></div>
+                                <div class="hide"><a href="/view/mypage/parents/myPage_parentsApplicationSent2.jsp"><span>내가 신청한 구인 현황</span></a></div>
+                                <div class="hide"><a href="/view/mypage/parents/myPage_parentsApplicationReceive2.jsp"><span>내게 지원한 구인 현황</span></a></div>
                         </div>
-                        <div class="menu-main"><a href="#"><span>찜한 맘시터</span></a></div>
-                        <div class="menu-main"><a href="#"><span>내 신청서 조회</span></a></div>
+                        <div class="menu-main"><a href="/view/mypage/parents/myPage_parentsInterest2.jsp"><span>찜한 맘시터</span></a></div>
+                        <div class="menu-main"><a href="/view/mypage/parents/myPage_parentsApplication2.jsp"><span>내 신청서 조회</span></a></div>
                         <hr class="line">
                         <div class="menu-main row m-0">
                         	<div class="menu-title col-9 p-0">
