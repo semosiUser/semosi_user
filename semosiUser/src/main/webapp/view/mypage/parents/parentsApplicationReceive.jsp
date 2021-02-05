@@ -1,20 +1,57 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/commons/footer.css">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/commons/header.css">
 </head>
 <body>
 <!-- BootStrap 4.6.0 라이브러리 -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
 
 <style>
+@media(max-width:760px){
+		#mypage-wrap{
+			margin: 0 auto;
+			padding:0px;
+			height: 100%;
+			width: 100%;
+		}
+		#content{
+		margin: 0px;
+		height: 100%;
+		width: 100%;
+		}
+		#sideBar{
+		display: none;
+		}
+	}
+	#mypage-wrap{
+		margin: 0 auto;
+		padding:0px;
+		height: 100%;
+		width: 70%;
+	}
+	#sideBar{
 
-
+		margin: 0px;
+		height: 100%;
+		width: 22%;
+	}
+	#content{
+		margin: 0px;
+		padding: 30px;
+		height: 100%;
+		width: 78%;
+	}
+	
+	/*-----------------------------------*/
+	
 	div{
 		border: 0px solid black;
 		margin: 0px;
@@ -23,7 +60,7 @@
 	}
 
 /*---- contents ----*/
-	#contents{
+	#parentsApplicationReceive_contents{
 		width: 100%;
 		height: 100%;
 		margin: 0px auto;
@@ -74,7 +111,7 @@
 		margin: 5px 0px 5px 0px;
 		text-align: center;
 	}
-	.card-img{
+	#interest-card-img>img{
 		width: 80px;
 		height: 80px;
 	}
@@ -113,13 +150,45 @@
 		color: rgb(172, 193, 191);
 		text-align: center;
 	}
-	.bi:hover{
+	 #deleteBtn:hover{
 		background-color: #f3f1f1;
 	}
+	
+	/*-----------------------------------*/
+	#kakao-talk-channel-chat-button{
+	float:right;
+	margin-right:50px;
+}
 </style>
 
-		<!-- contents  -->
-	<div id="contents">
+<%--카카오톡 채팅 스크립트--%>
+<script>
+  window.kakaoAsyncInit = function() {
+    Kakao.Channel.createChatButton({
+      container: '#kakao-talk-channel-chat-button',
+    });
+  };
+
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://developers.kakao.com/sdk/js/kakao.channel.min.js';
+    fjs.parentNode.insertBefore(js, fjs);
+  })(document, 'script', 'kakao-js-sdk');
+</script>
+
+<header>
+	<%@ include file="/WEB-INF/views/commons/header.jsp"%>
+</header>
+<div id="mypage-wrap" class="row">
+	<div id="sideBar">
+		<%@ include file="/view/mypage/common/parentsSidebar.jsp"%>
+	</div>
+	<div id="content">
+<!-- 여기서 부터 적용 -->
+
+	<div id="parentsApplicationReceive_contents">
   		<div id="interest-title">
   			<div id="interest-title-1"><span>내게 지원한 구인 현황</span></div>	
   		</div>
@@ -142,7 +211,7 @@
   						</div>
   					</div>
   					<div id="userInfo-6" class="userInfo-p col-1">
-  						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+  						<svg id="deleteBtn" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
   							<path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
 						</svg>
 					</div>
@@ -168,7 +237,7 @@
   						</div>
   					</div>
   					<div id="userInfo-6" class="userInfo-p col-1">
-  						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+  						<svg id="deleteBtn" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
   							<path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
 						</svg>
 					</div>
@@ -194,7 +263,7 @@
   						</div>
   					</div>
   					<div id="userInfo-6" class="userInfo-p col-1">
-  						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+  						<svg id="deleteBtn" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
   							<path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
 						</svg>
 					</div>
@@ -220,7 +289,7 @@
   						</div>
   					</div>
   					<div id="userInfo-6" class="userInfo-p col-1">
-  						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+  						<svg id="deleteBtn" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
   							<path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
 						</svg>
 					</div>
@@ -228,6 +297,17 @@
   			</div>
   		</div>
   		<hr class="menu-hr">
-  	</div>
+  	</div>	
+
+<!-- 여기까지 적용 -->
+	</div>
+</div>
+
+
+<%-- 카카오톡 채팅 아이콘 --%>
+<div id="kakao-talk-channel-chat-button" data-channel-public-id="_xaExoNK" data-title="consult" data-size="small" data-color="yellow" data-shape="pc" data-support-multiple-densities="true"></div>
+<footer>
+	<%@ include file="/WEB-INF/views/commons/footer.jsp"%>
+</footer>
 </body>
 </html>

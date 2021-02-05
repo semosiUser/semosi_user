@@ -124,7 +124,7 @@ div{
             <div id="naviContents">
                 <div id="navigation">
                     <div id="fixedNavi">
-                    	<div class="menu-main"><a href="#"><span>마이페이지</span></a></div>
+                    	<div class="menu-main"><a href="/view/mypage/sitter/sitterProfile.jsp"><span>마이페이지</span></a></div>
                     	<hr class="line">
                         <div class="menu-main row m-0">
                         	<div class="menu-title col-9 p-0">
@@ -140,11 +140,11 @@ div{
 							</div>
                         </div>
                        	<div class="menu-sub">
-                                <div class="hide"><a href="#"><span>내가 지원한 구직 현황</span></a></div>
-                                <div class="hide"><a href="#"><span>내게 신청한 구직 현황</span></a></div>
+                                <div class="hide"><a href="/view/mypage/sitter/sitterApplicationSent.jsp"><span>내가 신청한 구직 현황</span></a></div>
+                                <div class="hide"><a href="/view/mypage/sitter/sitterApplicationReceive.jsp"><span>내게 지원한 구직 현황</span></a></div>
                         </div>
-                        <div class="menu-main"><a href="#"><span>찜한 일자리</span></a></div>
-                        <div class="menu-main"><a href="#"><span>내 지원서 조회</span></a></div>
+                        <div class="menu-main"><a href="/view/mypage/sitter/sitterInterest.jsp"><span>찜한 일자리</span></a></div>
+                        <div class="menu-main"><a href="/view/mypage/sitter/sitterApplication.jsp"><span>내 신청서 조회</span></a></div>
                         <hr class="line">
                         <div class="menu-main row m-0">
                         	<div class="menu-title col-9 p-0">

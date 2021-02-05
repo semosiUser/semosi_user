@@ -7,11 +7,45 @@
 <title>Insert title here</title>
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/commons/footer.css">
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/commons/header.css">
-
 </head>
 <body>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 <style>
+@media(max-width:760px){
+		#mypage-wrap{
+			margin: 0 auto;
+			padding:0px;
+			height: 100%;
+			width: 100%;
+		}
+		#content{
+		margin: 0px;
+		height: 100%;
+		width: 100%;
+		}
+		#sideBar{
+		display: none;
+		}
+	}
+	#mypage-wrap{
+		margin: 0 auto;
+		padding:0px;
+		height: 100%;
+		width: 70%;
+	}
+	#sideBar{
+
+		margin: 0px;
+		height: 100%;
+		width: 22%;
+	}
+	#content{
+		margin: 0px;
+		padding: 30px;
+		height: 100%;
+		width: 78%;
+	}
+	/*-----------------------------------*/
+	<style>
 div{
 	border: 0px solid black;
 	}
@@ -164,26 +198,43 @@ section{
 	margin: 5px;
 	width: 99%;
 }
-
+	
+	/*-----------------------------------*/
+	#kakao-talk-channel-chat-button{
+	float:right;
+	margin-right:50px;
+}
 </style>
 
-<%--이미지 변경 js --%>
-<%--세미때 사용하던 js입니당. --%>
+<%--카카오톡 채팅 스크립트--%>
 <script>
-function uploadImg() {
-	var fileInfo = document.getElementById("input_file").files[0];
-	var reader = new FileReader();
-		reader.onload = function() {
-			document.getElementById("profile_img").src = reader.result;
-			document.getElementById("profile_form").submit();
-        	};         
-    if( fileInfo ) {
-    	reader.readAsDataURL( fileInfo );
-    }
-}
+  window.kakaoAsyncInit = function() {
+    Kakao.Channel.createChatButton({
+      container: '#kakao-talk-channel-chat-button',
+    });
+  };
+
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://developers.kakao.com/sdk/js/kakao.channel.min.js';
+    fjs.parentNode.insertBefore(js, fjs);
+  })(document, 'script', 'kakao-js-sdk');
 </script>
 
-<section id="section-wrap">
+<header>
+	<%@ include file="/WEB-INF/views/commons/header.jsp"%>
+</header>
+<div id="mypage-wrap" class="row">
+	<div id="sideBar">
+		<%@ include file="/view2/mypage/common/sitterSidebar.jsp"%>
+	</div>
+	<div id="content">
+<!-- 여기서 부터 적용 -->
+
+
+		<section id="section-wrap">
 	<div id="wrap">
 		<center>
 			<span id="content-title">나의 프로필</span>
@@ -247,5 +298,15 @@ function uploadImg() {
 </div>
 </section>
 
+<!-- 여기까지 적용 -->
+	</div>
+</div>
+
+
+<%-- 카카오톡 채팅 아이콘 --%>
+<div id="kakao-talk-channel-chat-button" data-channel-public-id="_xaExoNK" data-title="consult" data-size="small" data-color="yellow" data-shape="pc" data-support-multiple-densities="true"></div>
+<footer>
+	<%@ include file="/WEB-INF/views/commons/footer.jsp"%>
+</footer>
 </body>
 </html>

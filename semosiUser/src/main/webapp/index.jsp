@@ -30,31 +30,11 @@
    
    	-----------------------------------------------------------------------
 	
-	<form action="/view/mypage/common/myPage-profile.jsp" method="get">
-		<button>/마이페이지(프로필)</button>
+	<form action="/view2/mypage/parents/parentsProfile.jsp" method="get">
+		<button>/마이페이지 부모</button>
 	</form>
-	<form action="/view/mypage/parents/myPage_parentsApplicationSent.jsp" method="get">
-		<button>내 구인 현황(내가 신청한)P</button>
-	</form>
-	<form action="/view/mypage/sitter//myPage_sitterApplicationSent.jsp" method="get">
-		<button>내 구직 현황(내가 신청한)S</button>
-	</form>
-	<form action="/view/mypage/parents/myPage_parentsApplicationReceive.jsp" method="get">
-		<button>내 구인 현황(내게 지원한)P</button>
-	</form>
-	<form action="/view/mypage/sittermyPage_sitterApplicationReceive.jsp" method="get">
-		<button>내 구직 현황(내게 지원한)S</button>
-	</form>
-	<form action="/view/mypage/parents/myPage_parentsInterest.jsp" method="get">
-		<button>찜한 맘시터</button>
-	</form>
-	<form action="/view/mypage/sitter/myPage_sitterInterest.jsp" method="get">
-		<button>찜한 일자리</button>
-	</form>
-	<form action="/view/mypage/parents/myPage_parentsApplication.jsp" method="get">
-		<button>구인 신청서 조회</button>
-	</form>
-	<form action="/view/mypage/sitter/myPage_sitterApplication.jsp" method="get">
+	<form action="/view2/mypage/sitter/sitterProfile.jsp" method="get">
+		<button>/마이페이지 시터</button>
 	</form>
 	---------------------------
    

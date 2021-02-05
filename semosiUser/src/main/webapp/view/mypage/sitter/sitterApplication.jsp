@@ -5,29 +5,61 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/commons/footer.css">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/commons/header.css">
 </head>
 <body>
-	<!-- BootStrap 4.6.0 라이브러리 -->
-	<link rel="stylesheet"
-		href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-		integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
-		crossorigin="anonymous">
-	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-		crossorigin="anonymous"></script>
-	<script
-		src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
-		crossorigin="anonymous"></script>
-<style>
+<!-- BootStrap 4.6.0 라이브러리 -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
 
+<style>
+@media(max-width:760px){
+		#mypage-wrap{
+			margin: 0 auto;
+			padding:0px;
+			height: 100%;
+			width: 100%;
+		}
+
+		#content{
+		margin: 0px;
+		height: 100%;
+		width: 100%;
+		}
+		#sideBar{
+		display: none;
+		}
+	}
+	#mypage-wrap{
+		margin: 0 auto;
+		padding:0px;
+		height: 100%;
+		width: 70%;
+	}
+	#sideBar{
+
+		margin: 0px;
+		height: 100%;
+		width: 22%;
+	}
+	#content{
+		margin: 0px;
+		padding: 30px;
+		height: 100%;
+		width: 78%;
+	}
+	
+	/*-----------------------------------*/
+	
 div {
 	border: 0px solid black;
 	margin: 0px;
 	padding: 0px;
 	box-sizing: 0px;
 }
-#contents{
+#sitterApplication_contents{
 	height: 100%;
 	width: 100%;
 	margin: 0 auto;
@@ -173,23 +205,42 @@ textarea{
 .cctv_width{
 	margin-left: 20px;
 }
-</style>
-<%--세미때 사용하던 js입니당. --%>
-<script>
-function uploadImg() {
-	var fileInfo = document.getElementById("input_file").files[0];
-	var reader = new FileReader();
-		reader.onload = function() {
-			document.getElementById("profile_img").src = reader.result;
-			document.getElementById("profile_form").submit();
-        	};         
-    if( fileInfo ) {
-    	reader.readAsDataURL( fileInfo );
-    }
+	
+	/*-----------------------------------*/
+	#kakao-talk-channel-chat-button{
+	float:right;
+	margin-right:50px;
 }
+</style>
+
+<%--카카오톡 채팅 스크립트--%>
+<script>
+  window.kakaoAsyncInit = function() {
+    Kakao.Channel.createChatButton({
+      container: '#kakao-talk-channel-chat-button',
+    });
+  };
+
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://developers.kakao.com/sdk/js/kakao.channel.min.js';
+    fjs.parentNode.insertBefore(js, fjs);
+  })(document, 'script', 'kakao-js-sdk');
 </script>
 
-<div id="contents">
+<header>
+	<%@ include file="/WEB-INF/views/commons/header.jsp"%>
+</header>
+<div id="mypage-wrap" class="row">
+	<div id="sideBar">
+		<%@ include file="/view2/mypage/common/sitterSidebar.jsp"%>
+	</div>
+	<div id="content">
+<!-- 여기서 부터 적용 -->
+
+<div id="sitterApplication_contents">
 	<center>
 	<div id="application_title"><span>구인 신청서 조회</span></div>
 	<div id="application_table">
@@ -309,5 +360,15 @@ function uploadImg() {
 	</center>
 </div>
 
+<!-- 여기까지 적용 -->
+	</div>
+</div>
+
+
+<%-- 카카오톡 채팅 아이콘 --%>
+<div id="kakao-talk-channel-chat-button" data-channel-public-id="_xaExoNK" data-title="consult" data-size="small" data-color="yellow" data-shape="pc" data-support-multiple-densities="true"></div>
+<footer>
+	<%@ include file="/WEB-INF/views/commons/footer.jsp"%>
+</footer>
 </body>
 </html>
