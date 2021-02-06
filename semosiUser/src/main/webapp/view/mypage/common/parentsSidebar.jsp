@@ -15,6 +15,14 @@
 div{
 	border: 0px solid black;
 }
+a{
+	text-decoration: none;
+	color: black;
+	display: inline-block;
+}
+a:hover{
+	text-decoration: none;
+}
 #naviContents{
 	height: 100%;
 	width: 100%;
@@ -159,11 +167,11 @@ div{
 							</div>
                         </div>
                         <div class="menu-sub">
-                               <div class="hide"><a href="#"><span>작성한 후기</span></a></div>
-                               <div class="hide"><a href="#"><span>받은 후기</span></a></div>
+                               <div class="hide"><a href="/view/mypage/parents/MemberWritedReview.jsp"><span>작성한 후기</span></a></div>
+                               <div class="hide"><a href="/view/mypage/parents/MemberReceivedReview.jsp"><span>받은 후기</span></a></div>
                             </div>
                         <div class="menu-main"><a href="#"><span>내 채용 내역</span></a></div>
-                        <div class="menu-main"><a href="#"><span>신고 내역</span></a></div>
+                        <div class="menu-main"><a href="/view/mypage/parents/MemberReportPage.jsp"><span>신고 내역</span></a></div>
                         
                         <hr class="line">
                         <div class="menu-main row m-0">
@@ -180,8 +188,8 @@ div{
 							</div>
                         </div>
                         <div class="menu-sub">
-                               <div class="hide"><a href="#"><span>이용권 구매</span></a></div>
-                               <div class="hide"><a href="#"><span>이용권 조회</span></a></div>
+                               <div class="hide"><a href="/view/mypage/parents/VoucherBuyPage.jsp"><span>이용권 구매</span></a></div>
+                               <div class="hide"><a href="/view/mypage/parents/VoucherPayViewPage.jsp"><span>이용권 조회</span></a></div>
                             </div>
                        
                         

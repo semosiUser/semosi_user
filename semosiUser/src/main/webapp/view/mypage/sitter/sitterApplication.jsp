@@ -61,7 +61,7 @@ div {
 }
 #sitterApplication_contents{
 	height: 100%;
-	width: 100%;
+	width: 90%;
 	margin: 0 auto;
 	padding-top: 30px;
 }
@@ -189,7 +189,7 @@ textarea{
 	background-color: #f3f1f1;
 }
 #modify_btn{
-	width:50%;
+	width:100%;
 	height:50px;
 	margin-top:40px;
 	margin-bottom:40px;
@@ -197,6 +197,9 @@ textarea{
 	border:#F2CC8F;
 	font-size:1rem;
 	font-weight:700;
+}
+.input-subTitle{
+	padding-top: 10px;
 }
 /*---------------------*/
 #location_width{
@@ -258,80 +261,103 @@ textarea{
 		</div>
 		<div class="application_info">
 			<div class="info-title"><span>제목 입력</span></div>
-			<div class="info-input">
-				<input type="text" class="text-control" name="title" value="">
+			<div class="info-input row">
+				<div class="input-subTitle col-md-2 col-sm-12"><span>제목</span></div>
+				<div class="col-md-10 col-sm-12">
+					<input type="text" class="text-control" name="title" value="">
+				</div>
 			</div>
 		</div>
 		<div class="application_info">
 			<div class="info-title"><span>선호하는 돌봄유형</span></div>
-			<div class="info-input"  class="row">	
+			<div class="info-input row">
+				<div class="col-md-2 col-sm-12"><span>돌봄유형 선택</span></div>
+				<div class="col-md-10 col-sm-12">
 				<input type="radio" name="caretype" value="" class="caretype_width" checked="checked"/>신생아/영아 풀타임 돌봄<br>
 				<input type="radio" name="caretype" value="" class="caretype_width"/>등하원 돌봄<br>
 				<input type="radio" name="caretype" value="" class="caretype_width"/>신생아/영아 보조 돌봄<br>
 				<input type="radio" name="caretype" value="" class="caretype_width"/>놀이/학습 돌봄<br>
 				<input type="radio" name="caretype" value="" class="caretype_width"/>긴급/단기 돌봄  
+				</div>
 			</div>
 		</div>
 		<div class="application_info">
 			<div class="info-title"><span>돌봄 가능 연령</span></div>
-			<div class="info-input"  class="row">	
-				<input type='checkbox' name='careAge;' value='신생아' class="age_width"/> 신생아
-				<input type='checkbox' name='careAge;' value='영아' class="age_width"/> 영아
-				<input type='checkbox' name='careAge;' value='유아' class="age_width"/> 유아
-				<input type='checkbox' name='careAge;' value='초등학생' class="age_width"/> 초등학생
+			<div class="info-input row">
+				<div class="col-md-2 col-sm-12"><span>돌봄연령 선택</span></div>
+				<div class="col-md-10 col-sm-12">
+					<input type='checkbox' name='careAge;' value='신생아' class="age_width"/> 신생아
+					<input type='checkbox' name='careAge;' value='영아' class="age_width"/> 영아
+					<input type='checkbox' name='careAge;' value='유아' class="age_width"/> 유아
+					<input type='checkbox' name='careAge;' value='초등학생' class="age_width"/> 초등학생
+				</div>
 			</div>
 		</div>
 		<div class="application_info">
 			<div class="info-title"><span>가능한 활동</span></div>
-			<div class="info-input">
-				<input type="checkbox" name="careActivity" value="실내놀이" class="activity_width"/> 실내놀이
-				<input type="checkbox" name="careActivity" value="야외활동" class="activity_width"/> 야외활동
-				<input type="checkbox" name="careActivity" value="체육놀이" class="activity_width"/> 체육놀이
-				<input type="checkbox" name="careActivity" value="등하원돕기" class="activity_width"/> 등하원돕기
-				<br> 
-				<input type="checkbox" name="careActivity" value="한글놀이" class="activity_width"/> 한글놀이
-				<input type="checkbox" name="careActivity" value="영어놀이" class="activity_width"/> 영어놀이
-				<input type="checkbox" name="careActivity" value="학습지도" class="activity_width"/> 학습지도
-				<input type="checkbox" name="careActivity" value="책읽기" class="activity_width"/> 책읽기
-				<br> 
-				<input type="checkbox" name="careActivity" value="단기입주" class="activity_width"/> 단기입주
-				<input type="checkbox" name="careActivity" value="장기입주" class="activity_width"/> 장기입주
-				<input type="checkbox" name="careActivity" value="간단청소" class="activity_width"/> 간단청소
-				<input type="checkbox" name="careActivity" value="밥 챙겨주기" class="activity_width"/> 밥 챙겨주기
-				<br>
-				<input type="checkbox" name="careActivity" value="간단 설거지" class="activity_width"/> 간단 설거지
-				
+			<div class="info-input row">
+				<div class="col-md-2 col-sm-12"><span>가능활동 선택</span></div>
+				<div class="col-md-10 col-sm-12">
+					<input type="checkbox" name="careActivity" value="실내놀이" class="activity_width"/> 실내놀이
+					<input type="checkbox" name="careActivity" value="야외활동" class="activity_width"/> 야외활동
+					<input type="checkbox" name="careActivity" value="체육놀이" class="activity_width"/> 체육놀이
+					<input type="checkbox" name="careActivity" value="등하원돕기" class="activity_width"/> 등하원돕기
+					<br> 
+					<input type="checkbox" name="careActivity" value="한글놀이" class="activity_width"/> 한글놀이
+					<input type="checkbox" name="careActivity" value="영어놀이" class="activity_width"/> 영어놀이
+					<input type="checkbox" name="careActivity" value="학습지도" class="activity_width"/> 학습지도
+					<input type="checkbox" name="careActivity" value="책읽기" class="activity_width"/> 책읽기
+					<br> 
+					<input type="checkbox" name="careActivity" value="단기입주" class="activity_width"/> 단기입주
+					<input type="checkbox" name="careActivity" value="장기입주" class="activity_width"/> 장기입주
+					<input type="checkbox" name="careActivity" value="간단청소" class="activity_width"/> 간단청소
+					<input type="checkbox" name="careActivity" value="밥 챙겨주기" class="activity_width"/> 밥 챙겨주기
+					<br>
+					<input type="checkbox" name="careActivity" value="간단 설거지" class="activity_width"/> 간단 설거지
+				</div>
 			</div>
 		</div>
 		<div class="application_info">
 			<div class="info-title"><span>활동 가능 시간</span></div>
-			<div class="info-input">
-				활동 시작일 : <input type="number" name="startDate" vlaue="" class="text-control" id="inputyear-start" placeholder="1900" min="1900" max="2100">년 &nbsp;
-				<input type="number" name="startDate" vlaue=""  class="text-control" id="inputmonth-start" placeholder="01" min="1" max="12">월 &nbsp;
-				<input type="number" name="startDate" vlaue=""  class="text-control" id="inputdate-start" placeholder="01" min="1" max="31">일 
-				<br>
-				활동 종료일 : <input type="number" name="endDate" vlaue="" class="text-control" id="inputyear-end" placeholder="1900" min="1900" max="2100">년 &nbsp;
-				<input type="number" name="endDate" vlaue="" class="text-control" id="inputmonth-end" placeholder="01" min="1" max="12">월 &nbsp;
-				<input type="number" name="endDate" vlaue="" class="text-control" id="inputdate-end" placeholder="01" min="1" max="31">일
-				<br>
-				활동 시간 :&nbsp;&nbsp;&nbsp;&nbsp;
-				<input type="button" value="am : 10 : 00" class="time"/>
-				&nbsp;&nbsp;-&nbsp;&nbsp;
-				<input type="button" value="pm : 06 : 00" class="time"/>
-				<br><br>
-				활동 요일 : <input type="checkbox" name="careDays" value="월" class="days_width"/> 월 
-				<input type="checkbox" name="careDays" value="화" class="days_width"/> 화 
-				<input type="checkbox" name="careDays" value="수" class="days_width"/> 수 
-				<input type="checkbox" name="careDays" value="목" class="days_width"/> 목 
-				<input type="checkbox" name="careDays" value="금" class="days_width"/> 금 
-				<input type="checkbox" name="careDays" value="토" class="days_width"/> 토 
-				<input type="checkbox" name="careDays" value="일" class="days_width"/> 일
+			<div class="info-input row">
+				<div class="input-subTitle col-md-2 col-sm-12"><span>활동 시작일</span></div>
+					<div class="col-md-10 col-sm-12">
+					<input type="number" name="startDate" vlaue="" class="text-control" id="inputyear-start" placeholder="1900" min="1900" max="2100">년 &nbsp;
+					<input type="number" name="startDate" vlaue=""  class="text-control" id="inputmonth-start" placeholder="01" min="1" max="12">월 &nbsp;
+					<input type="number" name="startDate" vlaue=""  class="text-control" id="inputdate-start" placeholder="01" min="1" max="31">일 
+				</div>
+				<div class="input-subTitle col-md-2 col-sm-12"><span>활동 종료일</span></div>
+				<div class="col-md-10 col-sm-12">
+					<input type="number" name="endDate" vlaue="" class="text-control" id="inputyear-end" placeholder="1900" min="1900" max="2100">년 &nbsp;
+					<input type="number" name="endDate" vlaue="" class="text-control" id="inputmonth-end" placeholder="01" min="1" max="12">월 &nbsp;
+					<input type="number" name="endDate" vlaue="" class="text-control" id="inputdate-end" placeholder="01" min="1" max="31">일
+				</div>
+				<div class="input-subTitle col-md-2 col-sm-12"><span>활동 시간</span></div>
+				<div class="col-md-10 col-sm-12">
+					<input type="button" value="am : 10 : 00" class="time"/>
+					&nbsp;&nbsp;-&nbsp;&nbsp;
+					<input type="button" value="pm : 06 : 00" class="time"/>
+					<br><br>
+				</div>
+				<div class="col-md-2 col-sm-12"><span>활동 요일</span></div>
+				<div class="col-md-10 col-sm-12">
+					<input type="checkbox" name="careDays" value="월" class="days_width"/> 월 
+					<input type="checkbox" name="careDays" value="화" class="days_width"/> 화 
+					<input type="checkbox" name="careDays" value="수" class="days_width"/> 수 
+					<input type="checkbox" name="careDays" value="목" class="days_width"/> 목 
+					<input type="checkbox" name="careDays" value="금" class="days_width"/> 금 
+					<input type="checkbox" name="careDays" value="토" class="days_width"/> 토 
+					<input type="checkbox" name="careDays" value="일" class="days_width"/> 일
+				</div>
 			</div>
 		</div>
 		<div class="application_info">
 			<div class="info-title"><span>희망 시급</span></div>
-			<div class="info-input">
-				<input type="text" name="pay" class="text-control" id="pay"> 원
+			<div class="info-input row">
+				<div class="input-subTitle col-md-2 col-sm-12"><span>희망시급 입력</span></div>
+				<div class="col-md-10 col-sm-12">
+					<input type="text" name="pay" class="text-control" id="pay"> 원
+				</div>
 			</div>
 		</div>		
 		<div class="application_info">
@@ -342,20 +368,33 @@ textarea{
 		</div>
 		<div class="application_info">
 			<div class="info-title"><span>활동 가능 지역</span></div>
-			<div class="info-input">
-				1순위 : <input type="text" name="location" class="text-control" id="location_width"><br>
-				2순위 : <input type="text" name="location" class="text-control" id="location_width"><br>
-				3순위 : <input type="text" name="location" class="text-control" id="location_width"><br>
+			<div class="info-input row">
+				<div class="input-subTitle col-md-2 col-sm-12"><span>1순위</span></div>
+				<div class="col-md-10 col-sm-12">
+				<input type="text" name="location" class="text-control" id="location_width">
+				</div>
+				<div class="input-subTitle col-md-2 col-sm-12"><span>2순위</span></div>
+				<div class="col-md-10 col-sm-12">
+				<input type="text" name="location" class="text-control" id="location_width">
+				</div>
+				<div class="input-subTitle col-md-2 col-sm-12"><span>3순위</span></div>
+				<div class="col-md-10 col-sm-12">
+				<input type="text" name="location" class="text-control" id="location_width">
+				</div>
 			</div>
 		</div>
 		<div class="application_info">
 			<div class="info-title"><span>CCTV 동의여부</span></div>
-			<div class="info-input">
-				<input type="checkbox" name="cctvYn" value="N" class="cctv_width"/> CCTV 퐐영을 원하지 않습니다.
-				<input type="checkbox" name="cctvYn" value="Y" class="cctv_width"/> CCTV가 있어도 당당히 일할 수 있습니다.
+			<div class="info-input row">
+				<div class="col-md-6 col-sm-12">
+					<input type="checkbox" name="cctvYn" value="N" class="cctv_width"/> CCTV 퐐영을 원하지 않습니다.
+				</div>
+				<div class="col-md-6 col-sm-12">
+					<input type="checkbox" name="cctvYn" value="Y" class="cctv_width"/> CCTV가 있어도 당당히 일할 수 있습니다.
+				</div>
 			</div>
 		</div>
-		<button type="submit" id="modify_btn" value="modify">수정하기</button>
+		<input type="button" id="modify_btn" class="btn btn-warning" value="수정하기 " />
 	</div>
 	</center>
 </div>

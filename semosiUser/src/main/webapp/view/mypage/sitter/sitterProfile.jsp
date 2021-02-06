@@ -45,12 +45,12 @@
 		width: 78%;
 	}
 	/*-----------------------------------*/
-	<style>
+
 div{
 	border: 0px solid black;
 	}
 section{
-	width: 100%;
+	width: 90%;
 	height: 100%;
 	clear: both;
 	margin:0 auto;
@@ -174,27 +174,32 @@ section{
 	height:38px;
 	width:100px;
 	background-color:#f6d257;
-	border:#F2CC8F;
+	border:#ffc107;
 }
 
 #certify_btn{
 	height:38px;
 	width:120px;
 	background-color:#f6d257;
-	border:#F2CC8F;
+	border:#ffc107;
 }
 
 #modify_btn{
-	width:50%;
+	width:100%;
 	height:50px;
 	margin-top:40px;
 	margin-bottom:40px;
 	background-color:#f6d257;
-	border:#F2CC8F;
+	border:#ffc107;
 	font-size:1rem;
 	font-weight:700;
+	
 }
 .form-control{
+	margin: 5px;
+	width: 99%;
+}
+.form-control-1{
 	margin: 5px;
 	width: 99%;
 }
@@ -248,52 +253,60 @@ section{
 			</form>
 		</div>
 		<form id="info-table">
-			<div class="input_info">
-				<label>아이디</label> <input type="text" class="form-control" id="">
+			<div class="input_info row">
+				<div class="col-md-2 col-sm-12"><label>아이디</label></div>
+				<div class="col-md-10 col-sm-12"><input type="text" class="form-control" id=""></div>
 			</div>
-			<div class="input_info">
-				<label>비밀번호</label>
-				<input type="password" class="form-control" id="">
+			<div class="input_info row">
+				<div class="col-md-2 col-sm-12"><label>비밀번호</label></div>
+				<div class="col-md-10 col-sm-12"><input type="password" class="form-control" id=""></div>
 			</div>
-			<div class="input_info">
-				<label>비밀번호 재확인</label>
-				<input type="password" class="form-control" id="">
+			<div class="input_info row">
+				<div class="col-md-2 col-sm-12"><label>비밀번호 재확인</label></div>
+				<div class="col-md-10 col-sm-12"><input type="password" class="form-control" id=""></div>
 			</div>
-			<div class="input_info">
-				<label>이름</label>
-				<input type="text" class="form-control" id="">
+			<div class="input_info row">
+				<div class="col-md-2 col-sm-12"><label>이름</label></div>
+				<div class="col-md-10 col-sm-12"><input type="text" class="form-control" id=""></div>
 			</div>
-			<div class="input_info">
-				<label>닉네임</label>
-				<input type="text" class="form-control" id="">
+			<div class="input_info row">
+				<div class="col-md-2 col-sm-12"><label>닉네임</label></div>
+				<div class="col-md-10 col-sm-12"><input type="text" class="form-control" id=""></div>
 			</div>
-			<div class="input_info">
-				<label>Email</label><br>
-				<input type="text" class="form-control" id="inputEmail-first">&nbsp;@&nbsp;
-				<input type="text" class="form-control" id="inputEmail-second">
-				<input type="text" class="form-control" id="inputEmail-type">
+			<div class="input_info row">
+				<div class="col-md-2 col-sm-12"><label>Email</label></div>
+				<div class="col-md-10 col-sm-12">
+					<input type="text" class="form-control" id="inputEmail-first">&nbsp;@&nbsp;
+					<input type="text" class="form-control" id="inputEmail-second">
+					<input type="text" class="form-control" id="inputEmail-type">
+				</div>
 			</div>
-			<div class="input_info">
-				<label>생년월일</label><br>
-				<input type="number" class="form-control" id="inputbirth" placeholder="1900" min="1900" max="2100"> 년 &nbsp;
-				<input type="number" class="form-control" id="inputmonth" placeholder="01" min="1" max="12"> 월 &nbsp;
-				<input type="number" class="form-control" id="inputdate" placeholder="01" min="1" max="31"> 일 &nbsp;
+			<div class="input_info row">
+				<div class="col-md-2 col-sm-12"><label>생년월일</label></div>
+				<div class="col-md-10 col-sm-12">
+					<input type="number" class="form-control" id="inputbirth" placeholder="1900" min="1900" max="2100"> 년 &nbsp;
+					<input type="number" class="form-control" id="inputmonth" placeholder="01" min="1" max="12"> 월 &nbsp;
+					<input type="number" class="form-control" id="inputdate" placeholder="01" min="1" max="31"> 일 &nbsp;
+				</div>
 			</div>
-			<div class="input_info">
-				<label style="display:block;">주소</label>
-				<input type="text" class="form-control" id="inputZipcode">
-				<input type="button" value="주소검색" id="search_btn">
-				<input type="text" class="form-control" id="">
-				<input type="text" class="form-control" id="">
+			<div class="input_info row">
+				<div class="col-md-2 col-sm-12"><label style="display:block;">주소</label></div>
+				<div class="col-md-10 col-sm-12">
+					<input type="text" class="form-control" id="inputZipcode">
+					<input type="button" id="search_btn" class="btn btn-warning" value="주소검색 " />
+					<input type="text" class="form-control" id="">
+					<input type="text" class="form-control" id="">
+				</div>
 			</div>
-			<div class="input_info">
-				<label style="display: block;">핸드폰 번호</label>
-				<input type="text" class="form-control" id="inputPhone">
-				<input type="button" value="핸드폰 인증" id="certify_btn">
-				<input type="text" class="form-control" placeholder="인증번호를 입력하세요" id="checkPhone">
+			<div class="input_info row">
+				<div class="col-md-2 col-sm-12"><label style="display: block;">핸드폰 번호</label></div>
+				<div class="col-md-10 col-sm-12">
+					<input type="text" class="form-control" id="inputPhone">
+					<input type="button" id="certify_btn" class="btn btn-warning" value="핸드폰 인증" />
+					<input type="text" class="form-control" placeholder="인증번호를 입력하세요" id="checkPhone">
+				</div>
 			</div>
-			<button type="submit" id="modify_btn">수정하기</button>
-		</form>
+			<input type="button" id="modify_btn" class="btn btn-warning" value="수정하기" />
 	</center>
 </div>
 </section>
