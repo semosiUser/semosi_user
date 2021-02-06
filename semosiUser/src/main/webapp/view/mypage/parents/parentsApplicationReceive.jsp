@@ -15,6 +15,73 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
 
 <style>
+@media(min-width:1500px){
+	#mypage-wrap{
+		margin: 0 auto;
+		padding:0px;
+		height: 100%;
+		width: 70%;
+	}
+	#sideBar{
+		margin: 0px;
+		height: 100%;
+		width: 22%;
+	}
+	#content{
+		margin: 0px;
+		padding: 30px;
+		height: 100%;
+		width: 78%;
+	}
+	}
+@media(max-width:1500px){
+		#mypage-wrap{
+		margin: 0 auto;
+		padding:0px;
+		height: 100%;
+		width: 80%;
+	}
+	#sideBar{
+		height: 100%;
+		width: 23%;
+	}
+	#content{
+		height: 100%;
+		width: 77%;
+	}
+	}
+@media(max-width:1220px){
+		#mypage-wrap{
+		margin: 0 auto;
+		padding:0px;
+		height: 100%;
+		width: 90%;
+	}
+	#sideBar{
+		height: 100%;
+		width: 30%;
+	}
+	#content{
+		height: 100%;
+		width: 70%;
+	}
+	}
+@media(max-width:900px){
+		#mypage-wrap{
+		margin: 0 auto;
+		padding:0px;
+		height: 100%;
+		width: 100%;
+	}
+	#sideBar{
+		height: 100%;
+		width: 30%;
+	}
+	#content{
+		height: 100%;
+		width: 70%;
+	}
+	}
 @media(max-width:760px){
 		#mypage-wrap{
 			margin: 0 auto;
@@ -30,24 +97,6 @@
 		#sideBar{
 		display: none;
 		}
-	}
-	#mypage-wrap{
-		margin: 0 auto;
-		padding:0px;
-		height: 100%;
-		width: 70%;
-	}
-	#sideBar{
-
-		margin: 0px;
-		height: 100%;
-		width: 22%;
-	}
-	#content{
-		margin: 0px;
-		padding: 30px;
-		height: 100%;
-		width: 78%;
 	}
 	
 	/*-----------------------------------*/

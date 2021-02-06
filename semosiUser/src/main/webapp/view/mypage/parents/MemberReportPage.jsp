@@ -10,6 +10,73 @@
 </head>
 <body>
 <style>
+@media(min-width:1500px){
+	#mypage-wrap{
+		margin: 0 auto;
+		padding:0px;
+		height: 100%;
+		width: 70%;
+	}
+	#sideBar{
+		margin: 0px;
+		height: 100%;
+		width: 22%;
+	}
+	#content{
+		margin: 0px;
+		padding: 30px;
+		height: 100%;
+		width: 78%;
+	}
+	}
+@media(max-width:1500px){
+		#mypage-wrap{
+		margin: 0 auto;
+		padding:0px;
+		height: 100%;
+		width: 80%;
+	}
+	#sideBar{
+		height: 100%;
+		width: 23%;
+	}
+	#content{
+		height: 100%;
+		width: 77%;
+	}
+	}
+@media(max-width:1220px){
+		#mypage-wrap{
+		margin: 0 auto;
+		padding:0px;
+		height: 100%;
+		width: 90%;
+	}
+	#sideBar{
+		height: 100%;
+		width: 30%;
+	}
+	#content{
+		height: 100%;
+		width: 70%;
+	}
+	}
+@media(max-width:900px){
+		#mypage-wrap{
+		margin: 0 auto;
+		padding:0px;
+		height: 100%;
+		width: 100%;
+	}
+	#sideBar{
+		height: 100%;
+		width: 30%;
+	}
+	#content{
+		height: 100%;
+		width: 70%;
+	}
+	}
 @media(max-width:760px){
 		#mypage-wrap{
 			margin: 0 auto;
@@ -25,24 +92,6 @@
 		#sideBar{
 		display: none;
 		}
-	}
-	#mypage-wrap{
-		margin: 0 auto;
-		padding:0px;
-		height: 100%;
-		width: 70%;
-	}
-	#sideBar{
-
-		margin: 0px;
-		height: 100%;
-		width: 22%;
-	}
-	#content{
-		margin: 0px;
-		padding: 30px;
-		height: 100%;
-		width: 78%;
 	}
 	/*-----------------------------------*/
 

@@ -5,7 +5,95 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/commons/footer.css">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/commons/header.css">
+</head>
+<body>
 <style>
+@media(min-width:1500px){
+	#mypage-wrap{
+		margin: 0 auto;
+		padding:0px;
+		height: 100%;
+		width: 70%;
+	}
+	#sideBar{
+		margin: 0px;
+		height: 100%;
+		width: 22%;
+	}
+	#content{
+		margin: 0px;
+		padding: 30px;
+		height: 100%;
+		width: 78%;
+	}
+	}
+@media(max-width:1500px){
+		#mypage-wrap{
+		margin: 0 auto;
+		padding:0px;
+		height: 100%;
+		width: 80%;
+	}
+	#sideBar{
+		height: 100%;
+		width: 23%;
+	}
+	#content{
+		height: 100%;
+		width: 77%;
+	}
+	}
+@media(max-width:1220px){
+		#mypage-wrap{
+		margin: 0 auto;
+		padding:0px;
+		height: 100%;
+		width: 90%;
+	}
+	#sideBar{
+		height: 100%;
+		width: 30%;
+	}
+	#content{
+		height: 100%;
+		width: 70%;
+	}
+	}
+@media(max-width:900px){
+		#mypage-wrap{
+		margin: 0 auto;
+		padding:0px;
+		height: 100%;
+		width: 100%;
+	}
+	#sideBar{
+		height: 100%;
+		width: 30%;
+	}
+	#content{
+		height: 100%;
+		width: 70%;
+	}
+	}
+@media(max-width:760px){
+		#mypage-wrap{
+			margin: 0 auto;
+			padding:0px;
+			height: 100%;
+			width: 100%;
+		}
+		#content{
+		margin: 0px;
+		height: 100%;
+		width: 100%;
+		}
+		#sideBar{
+		display: none;
+		}
+	}
+	/*-----------------------------------*/
 * {
 	box-sizing: border-box;
 }
@@ -49,18 +137,40 @@
 .certificationBtn{
 	width:85%;
 }
+	/*-----------------------------------*/
+	#kakao-talk-channel-chat-button{
+	float:right;
+	margin-right:50px;
+}
 </style>
 
-</head>
-<body>
+<%--카카오톡 채팅 스크립트--%>
+<script>
+  window.kakaoAsyncInit = function() {
+    Kakao.Channel.createChatButton({
+      container: '#kakao-talk-channel-chat-button',
+    });
+  };
 
-	<link rel="stylesheet"
-		href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-		integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
-		crossorigin="anonymous">
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://developers.kakao.com/sdk/js/kakao.channel.min.js';
+    fjs.parentNode.insertBefore(js, fjs);
+  })(document, 'script', 'kakao-js-sdk');
+</script>
 
-	<header> <%@ include file="/WEB-INF/views/commons/header.jsp"%>
-	</header>
+<header>
+	<%@ include file="/WEB-INF/views/commons/header.jsp"%>
+</header>
+<div id="mypage-wrap" class="row">
+	<div id="sideBar">
+		<%@ include file="/view/mypage/common/parentsSidebar.jsp"%>
+	</div>
+	<div id="content">
+<!-- 여기서 부터 적용 -->
+
 
 	<section id="wrapper">
 	<div class="container">
@@ -166,8 +276,15 @@
 
 	</section>
 
-	<footer> <%@ include file="/WEB-INF/views/commons/footer.jsp"%>
-	</footer>
+<!-- 여기까지 적용 -->
+	</div>
+</div>
 
+
+<%-- 카카오톡 채팅 아이콘 --%>
+<div id="kakao-talk-channel-chat-button" data-channel-public-id="_xaExoNK" data-title="consult" data-size="small" data-color="yellow" data-shape="pc" data-support-multiple-densities="true"></div>
+<footer>
+	<%@ include file="/WEB-INF/views/commons/footer.jsp"%>
+</footer>
 </body>
 </html>
